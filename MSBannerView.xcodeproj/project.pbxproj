@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC4BB2F61C0847430081B710 /* 0dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC4BB2F51C0847430081B710 /* 0dog.jpg */; };
 		BCCED9421B7C44720002918C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCED9411B7C44720002918C /* main.m */; };
 		BCCED9451B7C44720002918C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCED9441B7C44720002918C /* AppDelegate.m */; };
 		BCCED9481B7C44720002918C /* MSBannerView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCCED9461B7C44720002918C /* MSBannerView.xcdatamodeld */; };
@@ -15,6 +16,10 @@
 		BCCED9501B7C44720002918C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCCED94F1B7C44720002918C /* Images.xcassets */; };
 		BCCED9531B7C44720002918C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCED9511B7C44720002918C /* LaunchScreen.xib */; };
 		BCCED95F1B7C44720002918C /* MSBannerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCED95E1B7C44720002918C /* MSBannerViewTests.m */; };
+		BCCED96B1B7C45DD0002918C /* MSBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCED96A1B7C45DD0002918C /* MSBannerView.m */; };
+		BCCED96E1B7C6EED0002918C /* MSBannerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCED96D1B7C6EED0002918C /* MSBannerCollectionViewCell.m */; };
+		BCFD992E1C06ADAC009BCD1A /* MSBannerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFD992D1C06ADAC009BCD1A /* MSBannerConfig.m */; };
+		CE9578079282EA00B86CADC6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D2401B2E63FDD73BA8E116 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21C86B369AD771CBB35D7076 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		630F6609DCB241845ACEE724 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		78D2401B2E63FDD73BA8E116 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC4BB2F51C0847430081B710 /* 0dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0dog.jpg; sourceTree = "<group>"; };
 		BCCED93C1B7C44720002918C /* MSBannerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSBannerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCED9401B7C44720002918C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCCED9411B7C44720002918C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +51,12 @@
 		BCCED9581B7C44720002918C /* MSBannerViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSBannerViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCED95D1B7C44720002918C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCCED95E1B7C44720002918C /* MSBannerViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSBannerViewTests.m; sourceTree = "<group>"; };
+		BCCED9691B7C45DD0002918C /* MSBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBannerView.h; sourceTree = "<group>"; };
+		BCCED96A1B7C45DD0002918C /* MSBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSBannerView.m; sourceTree = "<group>"; };
+		BCCED96C1B7C6EED0002918C /* MSBannerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBannerCollectionViewCell.h; sourceTree = "<group>"; };
+		BCCED96D1B7C6EED0002918C /* MSBannerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSBannerCollectionViewCell.m; sourceTree = "<group>"; };
+		BCFD992C1C06ADAC009BCD1A /* MSBannerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBannerConfig.h; sourceTree = "<group>"; };
+		BCFD992D1C06ADAC009BCD1A /* MSBannerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSBannerConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9578079282EA00B86CADC6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +78,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98ACE91C49290D4BE08F9BE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78D2401B2E63FDD73BA8E116 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9FAE99C70CD98C0690B8C98A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				630F6609DCB241845ACEE724 /* Pods.debug.xcconfig */,
+				21C86B369AD771CBB35D7076 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BCCED9331B7C44720002918C = {
 			isa = PBXGroup;
 			children = (
 				BCCED93E1B7C44720002918C /* MSBannerView */,
 				BCCED95B1B7C44720002918C /* MSBannerViewTests */,
 				BCCED93D1B7C44720002918C /* Products */,
+				9FAE99C70CD98C0690B8C98A /* Pods */,
+				98ACE91C49290D4BE08F9BE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,11 +118,13 @@
 		BCCED93E1B7C44720002918C /* MSBannerView */ = {
 			isa = PBXGroup;
 			children = (
+				BCCED9681B7C45C50002918C /* MSBannerView */,
 				BCCED9431B7C44720002918C /* AppDelegate.h */,
 				BCCED9441B7C44720002918C /* AppDelegate.m */,
 				BCCED9491B7C44720002918C /* ViewController.h */,
 				BCCED94A1B7C44720002918C /* ViewController.m */,
 				BCCED94C1B7C44720002918C /* Main.storyboard */,
+				BC4BB2F51C0847430081B710 /* 0dog.jpg */,
 				BCCED94F1B7C44720002918C /* Images.xcassets */,
 				BCCED9511B7C44720002918C /* LaunchScreen.xib */,
 				BCCED9461B7C44720002918C /* MSBannerView.xcdatamodeld */,
@@ -122,6 +159,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BCCED9681B7C45C50002918C /* MSBannerView */ = {
+			isa = PBXGroup;
+			children = (
+				BCCED9691B7C45DD0002918C /* MSBannerView.h */,
+				BCCED96A1B7C45DD0002918C /* MSBannerView.m */,
+				BCCED96C1B7C6EED0002918C /* MSBannerCollectionViewCell.h */,
+				BCCED96D1B7C6EED0002918C /* MSBannerCollectionViewCell.m */,
+				BCFD992C1C06ADAC009BCD1A /* MSBannerConfig.h */,
+				BCFD992D1C06ADAC009BCD1A /* MSBannerConfig.m */,
+			);
+			name = MSBannerView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCCED9621B7C44720002918C /* Build configuration list for PBXNativeTarget "MSBannerView" */;
 			buildPhases = (
+				CBC08603D6348C8FCEB22DC8 /* Check Pods Manifest.lock */,
 				BCCED9381B7C44720002918C /* Sources */,
 				BCCED9391B7C44720002918C /* Frameworks */,
 				BCCED93A1B7C44720002918C /* Resources */,
+				0089D033018D70CAC20A6824 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCCED94E1B7C44720002918C /* Main.storyboard in Resources */,
+				BC4BB2F61C0847430081B710 /* 0dog.jpg in Resources */,
 				BCCED9531B7C44720002918C /* LaunchScreen.xib in Resources */,
 				BCCED9501B7C44720002918C /* Images.xcassets in Resources */,
 			);
@@ -217,15 +270,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0089D033018D70CAC20A6824 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBC08603D6348C8FCEB22DC8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BCCED9381B7C44720002918C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCED96E1B7C6EED0002918C /* MSBannerCollectionViewCell.m in Sources */,
+				BCCED96B1B7C45DD0002918C /* MSBannerView.m in Sources */,
 				BCCED9481B7C44720002918C /* MSBannerView.xcdatamodeld in Sources */,
 				BCCED9451B7C44720002918C /* AppDelegate.m in Sources */,
 				BCCED94B1B7C44720002918C /* ViewController.m in Sources */,
 				BCCED9421B7C44720002918C /* main.m in Sources */,
+				BCFD992E1C06ADAC009BCD1A /* MSBannerConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +438,7 @@
 		};
 		BCCED9631B7C44720002918C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 630F6609DCB241845ACEE724 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MSBannerView/Info.plist;
@@ -359,6 +449,7 @@
 		};
 		BCCED9641B7C44720002918C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21C86B369AD771CBB35D7076 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MSBannerView/Info.plist;
@@ -420,6 +511,7 @@
 				BCCED9641B7C44720002918C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BCCED9651B7C44720002918C /* Build configuration list for PBXNativeTarget "MSBannerViewTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +520,7 @@
 				BCCED9671B7C44720002918C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
