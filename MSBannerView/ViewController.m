@@ -9,8 +9,7 @@
 #import "ViewController.h"
 #import "MSCircleView.h"
 #import "MSCircleCustomCell.h"
-@interface ViewController ()
-
+@interface ViewController () <MSCircleViewDelegate>
 
 @end
 
@@ -28,11 +27,17 @@
     }
     
     MSCircleView *circle = [MSCircleView circleViewWithFrame:CGRectMake(0, 200, self.view.frame.size.width, 200) localImageArray:arr1 perPageCount:3];
-    circle.autoScroll = YES;
-    circle.scrollByItem = YES;
-//    circle.cellClass = [MSCircleCustomCell class];
+    circle.delegate = self;
+//    circle.autoScroll = YES;
+//    circle.scrollByItem = YES;
+    circle.cellClass = [MSCircleCustomCell class];
+    
     [circle addTapBlock:^(NSInteger index) {
         NSLog(@"current Index:%d",index);
+    }];
+    
+    [circle configCustomCell:^(MSCircleBaseCell *customCell, NSInteger index) {
+        ((MSCircleCustomCell*)customCell).textLabel.text = [NSString stringWithFormat:@"%ld",(long)index];
     }];
     
     [self.view addSubview:circle];
@@ -48,6 +53,12 @@
 
     
 }
+
+//- (void)circleView:(MSCircleView *)circleView configCustomCell:(MSCircleBaseCell *)customCell AtIndex:(NSInteger)index
+//{
+//    MSCircleCustomCell *cell = (MSCircleCustomCell*)customCell;
+//    cell.textLabel.text = [NSString stringWithFormat:@"%d",index];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -128,10 +128,10 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
         for (NSInteger i = 0; i < perPageCount; i++) {
             // 补上头
             NSString *head = [urlImageArray objectAtIndex:i];
-            [array insertObject:head atIndex:i];
+            [array addObject:head];
             // 补上尾
             NSString *tail = [urlImageArray objectAtIndex:urlImageArray.count - perPageCount + i];
-            [array addObject:tail];
+            [array insertObject:tail atIndex:i];
         }
         self.urlImageArray = array;
         _totalPage = array.count / perPageCount;
@@ -176,10 +176,10 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
         for (NSInteger i = 0; i < perPageCount; i++) {
             // 补上头
             NSString *head = [localImageArray objectAtIndex:i];
-            [array insertObject:head atIndex:i];
+            [array addObject:head];
             // 补上尾
             NSString *tail = [localImageArray objectAtIndex:localImageArray.count - perPageCount + i];
-            [array addObject:tail];
+            [array insertObject:tail atIndex:i];
         }
         self.localImageArray = array;
         _totalPage = array.count / perPageCount;
@@ -224,8 +224,26 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
         cell.imaView.image = self.localImageArray[indexPath.row];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"第%d",indexPath.row];
-    [cell.textLabel sizeToFit];
+    // Cell在外部下标
+    NSInteger index = (indexPath.row - _perPageCount) % _realImageCount;
+    if (index < 0) {
+        index = _realImageCount - _perPageCount + indexPath.row;
+    }
+
+    if (self.configBlock) {
+        self.configBlock(cell,index);
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(circleView:configCustomCell:AtIndex:)]) {
+        // 自定义cell配置
+        if (!self.cellClass) {
+            NSAssert(0, @"必须先设置self.cellClass_继承自MSCircleBaseCell类");
+            return cell;
+        }
+       [self.delegate circleView:self configCustomCell:cell AtIndex:index];
+    }
+
+    //0x7f9783d1bb50
     return cell;
 }
 
@@ -335,7 +353,6 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
         [_collectionView setContentOffset:CGPointMake(targetX, 0) animated:YES];
         [self startScroll];
     } else {
-        NSLog(@"hua-----");
         [self stopScroll];
         CGFloat targetX = amendX + _collectionView.frame.size.width;
         [_collectionView setContentOffset:CGPointMake(targetX, 0) animated:YES];
@@ -371,10 +388,19 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
 
 }
 
-#pragma mark -点击事件block
+#pragma mark -block
 - (void)addTapBlock:(CircleViewTapBlock)block
 {
     _block = [block copy];
+}
+
+- (void)configCustomCell:(CircleViewCustomCellConfigBlock)configBlock
+{
+    if (!self.cellClass) {
+        NSAssert(0, @"必须先设置self.cellClass_继承自MSCircleBaseCell类");
+        return;
+    }
+    _configBlock = configBlock;
 }
 
 @end

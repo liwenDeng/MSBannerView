@@ -15,10 +15,12 @@
 
 - (void)circleView:(MSCircleView*) circleView clickedAtIndex:(NSInteger) index;
 
+- (void)circleView:(MSCircleView *)circleView configCustomCell:(MSCircleBaseCell*)customCell AtIndex:(NSInteger)index;
+
 @end
 
-
 typedef void(^CircleViewTapBlock)(NSInteger index);
+typedef void(^CircleViewCustomCellConfigBlock)(MSCircleBaseCell* customCell,NSInteger index);
 
 @interface MSCircleView : UIView
 
@@ -41,6 +43,11 @@ typedef void(^CircleViewTapBlock)(NSInteger index);
  *  点击事件
  */
 @property (nonatomic, copy)CircleViewTapBlock block;
+
+/**
+ *  配置自定义Cell
+ */
+@property (nonatomic, copy)CircleViewCustomCellConfigBlock configBlock;
 
 @property (nonatomic, strong)Class cellClass;
 
@@ -68,5 +75,6 @@ typedef void(^CircleViewTapBlock)(NSInteger index);
  *  点击回调
  */
 - (void)addTapBlock:(CircleViewTapBlock)block;
+- (void)configCustomCell:(CircleViewCustomCellConfigBlock)configBlock;
 
 @end

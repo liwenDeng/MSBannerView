@@ -11,6 +11,5 @@
 @interface MSCircleBaseCell : UICollectionViewCell
 
 @property (nonatomic,strong) UIImageView* imaView;
-@property (nonatomic,strong) UILabel* textLabel;
 
 @end
