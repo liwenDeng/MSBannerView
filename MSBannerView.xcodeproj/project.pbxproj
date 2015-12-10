@@ -7,7 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC1848AC1C113585006CFD1F /* MSCircleBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1848AB1C113585006CFD1F /* MSCircleBaseCell.m */; };
+		BC1848B81C1196E0006CFD1F /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1848AE1C1196E0006CFD1F /* 1.png */; };
+		BC1848B91C1196E0006CFD1F /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1848AF1C1196E0006CFD1F /* 10.png */; };
+		BC1848BA1C1196E0006CFD1F /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1848B01C1196E0006CFD1F /* 2.png */; };
+		BC1848BB1C1196E0006CFD1F /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1848B11C1196E0006CFD1F /* 3.png */; };
+		BC1848BC1C1196E0006CFD1F /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1848B21C1196E0006CFD1F /* 4.png */; };
+		BC1848BD1C1196E0006CFD1F /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1848B31C1196E0006CFD1F /* 5.png */; };
+		BC1848BE1C1196E0006CFD1F /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1848B41C1196E0006CFD1F /* 6.png */; };
+		BC1848BF1C1196E0006CFD1F /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1848B51C1196E0006CFD1F /* 7.png */; };
+		BC1848C01C1196E0006CFD1F /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1848B61C1196E0006CFD1F /* 8.png */; };
+		BC1848C11C1196E0006CFD1F /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1848B71C1196E0006CFD1F /* 9.png */; };
+		BC19A7E71C1813FD00C5C024 /* MSCircleCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC19A7E61C1813FD00C5C024 /* MSCircleCustomCell.m */; };
 		BC4BB2F61C0847430081B710 /* 0dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC4BB2F51C0847430081B710 /* 0dog.jpg */; };
+		BC79D8711C0EE4A4005FF3EC /* MSCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC79D8701C0EE4A4005FF3EC /* MSCircleView.m */; };
 		BCCED9421B7C44720002918C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCED9411B7C44720002918C /* main.m */; };
 		BCCED9451B7C44720002918C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCED9441B7C44720002918C /* AppDelegate.m */; };
 		BCCED9481B7C44720002918C /* MSBannerView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCCED9461B7C44720002918C /* MSBannerView.xcdatamodeld */; };
@@ -16,9 +29,6 @@
 		BCCED9501B7C44720002918C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCCED94F1B7C44720002918C /* Images.xcassets */; };
 		BCCED9531B7C44720002918C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCED9511B7C44720002918C /* LaunchScreen.xib */; };
 		BCCED95F1B7C44720002918C /* MSBannerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCED95E1B7C44720002918C /* MSBannerViewTests.m */; };
-		BCCED96B1B7C45DD0002918C /* MSBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCED96A1B7C45DD0002918C /* MSBannerView.m */; };
-		BCCED96E1B7C6EED0002918C /* MSBannerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCED96D1B7C6EED0002918C /* MSBannerCollectionViewCell.m */; };
-		BCFD992E1C06ADAC009BCD1A /* MSBannerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFD992D1C06ADAC009BCD1A /* MSBannerConfig.m */; };
 		CE9578079282EA00B86CADC6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D2401B2E63FDD73BA8E116 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +46,23 @@
 		21C86B369AD771CBB35D7076 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		630F6609DCB241845ACEE724 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		78D2401B2E63FDD73BA8E116 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1848AA1C113585006CFD1F /* MSCircleBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCircleBaseCell.h; sourceTree = "<group>"; };
+		BC1848AB1C113585006CFD1F /* MSCircleBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCircleBaseCell.m; sourceTree = "<group>"; };
+		BC1848AE1C1196E0006CFD1F /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		BC1848AF1C1196E0006CFD1F /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
+		BC1848B01C1196E0006CFD1F /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		BC1848B11C1196E0006CFD1F /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		BC1848B21C1196E0006CFD1F /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		BC1848B31C1196E0006CFD1F /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		BC1848B41C1196E0006CFD1F /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		BC1848B51C1196E0006CFD1F /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		BC1848B61C1196E0006CFD1F /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		BC1848B71C1196E0006CFD1F /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
+		BC19A7E51C1813FD00C5C024 /* MSCircleCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCircleCustomCell.h; sourceTree = "<group>"; };
+		BC19A7E61C1813FD00C5C024 /* MSCircleCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCircleCustomCell.m; sourceTree = "<group>"; };
 		BC4BB2F51C0847430081B710 /* 0dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0dog.jpg; sourceTree = "<group>"; };
+		BC79D86F1C0EE4A4005FF3EC /* MSCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCircleView.h; sourceTree = "<group>"; };
+		BC79D8701C0EE4A4005FF3EC /* MSCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCircleView.m; sourceTree = "<group>"; };
 		BCCED93C1B7C44720002918C /* MSBannerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSBannerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCED9401B7C44720002918C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCCED9411B7C44720002918C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,12 +77,6 @@
 		BCCED9581B7C44720002918C /* MSBannerViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSBannerViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCED95D1B7C44720002918C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCCED95E1B7C44720002918C /* MSBannerViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSBannerViewTests.m; sourceTree = "<group>"; };
-		BCCED9691B7C45DD0002918C /* MSBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBannerView.h; sourceTree = "<group>"; };
-		BCCED96A1B7C45DD0002918C /* MSBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSBannerView.m; sourceTree = "<group>"; };
-		BCCED96C1B7C6EED0002918C /* MSBannerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBannerCollectionViewCell.h; sourceTree = "<group>"; };
-		BCCED96D1B7C6EED0002918C /* MSBannerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSBannerCollectionViewCell.m; sourceTree = "<group>"; };
-		BCFD992C1C06ADAC009BCD1A /* MSBannerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBannerConfig.h; sourceTree = "<group>"; };
-		BCFD992D1C06ADAC009BCD1A /* MSBannerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSBannerConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +115,36 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BC1848AD1C1196E0006CFD1F /* imges */ = {
+			isa = PBXGroup;
+			children = (
+				BC1848AE1C1196E0006CFD1F /* 1.png */,
+				BC1848AF1C1196E0006CFD1F /* 10.png */,
+				BC1848B01C1196E0006CFD1F /* 2.png */,
+				BC1848B11C1196E0006CFD1F /* 3.png */,
+				BC1848B21C1196E0006CFD1F /* 4.png */,
+				BC1848B31C1196E0006CFD1F /* 5.png */,
+				BC1848B41C1196E0006CFD1F /* 6.png */,
+				BC1848B51C1196E0006CFD1F /* 7.png */,
+				BC1848B61C1196E0006CFD1F /* 8.png */,
+				BC1848B71C1196E0006CFD1F /* 9.png */,
+			);
+			path = imges;
+			sourceTree = "<group>";
+		};
+		BC79D86E1C0EE491005FF3EC /* MSCircleView */ = {
+			isa = PBXGroup;
+			children = (
+				BC79D86F1C0EE4A4005FF3EC /* MSCircleView.h */,
+				BC79D8701C0EE4A4005FF3EC /* MSCircleView.m */,
+				BC1848AA1C113585006CFD1F /* MSCircleBaseCell.h */,
+				BC1848AB1C113585006CFD1F /* MSCircleBaseCell.m */,
+				BC19A7E51C1813FD00C5C024 /* MSCircleCustomCell.h */,
+				BC19A7E61C1813FD00C5C024 /* MSCircleCustomCell.m */,
+			);
+			path = MSCircleView;
+			sourceTree = "<group>";
+		};
 		BCCED9331B7C44720002918C = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +168,8 @@
 		BCCED93E1B7C44720002918C /* MSBannerView */ = {
 			isa = PBXGroup;
 			children = (
-				BCCED9681B7C45C50002918C /* MSBannerView */,
+				BC1848AD1C1196E0006CFD1F /* imges */,
+				BC79D86E1C0EE491005FF3EC /* MSCircleView */,
 				BCCED9431B7C44720002918C /* AppDelegate.h */,
 				BCCED9441B7C44720002918C /* AppDelegate.m */,
 				BCCED9491B7C44720002918C /* ViewController.h */,
@@ -126,8 +177,8 @@
 				BCCED94C1B7C44720002918C /* Main.storyboard */,
 				BC4BB2F51C0847430081B710 /* 0dog.jpg */,
 				BCCED94F1B7C44720002918C /* Images.xcassets */,
-				BCCED9511B7C44720002918C /* LaunchScreen.xib */,
 				BCCED9461B7C44720002918C /* MSBannerView.xcdatamodeld */,
+				BCCED9511B7C44720002918C /* LaunchScreen.xib */,
 				BCCED93F1B7C44720002918C /* Supporting Files */,
 			);
 			path = MSBannerView;
@@ -157,19 +208,6 @@
 				BCCED95D1B7C44720002918C /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BCCED9681B7C45C50002918C /* MSBannerView */ = {
-			isa = PBXGroup;
-			children = (
-				BCCED9691B7C45DD0002918C /* MSBannerView.h */,
-				BCCED96A1B7C45DD0002918C /* MSBannerView.m */,
-				BCCED96C1B7C6EED0002918C /* MSBannerCollectionViewCell.h */,
-				BCCED96D1B7C6EED0002918C /* MSBannerCollectionViewCell.m */,
-				BCFD992C1C06ADAC009BCD1A /* MSBannerConfig.h */,
-				BCFD992D1C06ADAC009BCD1A /* MSBannerConfig.m */,
-			);
-			name = MSBannerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,10 +292,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1848BE1C1196E0006CFD1F /* 6.png in Resources */,
+				BC1848BC1C1196E0006CFD1F /* 4.png in Resources */,
+				BC1848BD1C1196E0006CFD1F /* 5.png in Resources */,
+				BC1848BF1C1196E0006CFD1F /* 7.png in Resources */,
 				BCCED94E1B7C44720002918C /* Main.storyboard in Resources */,
 				BC4BB2F61C0847430081B710 /* 0dog.jpg in Resources */,
+				BC1848BA1C1196E0006CFD1F /* 2.png in Resources */,
+				BC1848BB1C1196E0006CFD1F /* 3.png in Resources */,
+				BC1848B91C1196E0006CFD1F /* 10.png in Resources */,
+				BC1848C11C1196E0006CFD1F /* 9.png in Resources */,
+				BC1848C01C1196E0006CFD1F /* 8.png in Resources */,
 				BCCED9531B7C44720002918C /* LaunchScreen.xib in Resources */,
 				BCCED9501B7C44720002918C /* Images.xcassets in Resources */,
+				BC1848B81C1196E0006CFD1F /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,13 +356,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCCED96E1B7C6EED0002918C /* MSBannerCollectionViewCell.m in Sources */,
-				BCCED96B1B7C45DD0002918C /* MSBannerView.m in Sources */,
 				BCCED9481B7C44720002918C /* MSBannerView.xcdatamodeld in Sources */,
+				BC1848AC1C113585006CFD1F /* MSCircleBaseCell.m in Sources */,
+				BC19A7E71C1813FD00C5C024 /* MSCircleCustomCell.m in Sources */,
+				BC79D8711C0EE4A4005FF3EC /* MSCircleView.m in Sources */,
 				BCCED9451B7C44720002918C /* AppDelegate.m in Sources */,
 				BCCED94B1B7C44720002918C /* ViewController.m in Sources */,
 				BCCED9421B7C44720002918C /* main.m in Sources */,
-				BCFD992E1C06ADAC009BCD1A /* MSBannerConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
