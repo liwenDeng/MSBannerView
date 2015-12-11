@@ -171,14 +171,10 @@
 			children = (
 				BC1848AD1C1196E0006CFD1F /* imges */,
 				BC79D86E1C0EE491005FF3EC /* MSCircleView */,
-				BCCED9431B7C44720002918C /* AppDelegate.h */,
-				BCCED9441B7C44720002918C /* AppDelegate.m */,
-				BC27E8D21C1A69D300F335BD /* FirstViewController.h */,
-				BC27E8D31C1A69D300F335BD /* FirstViewController.m */,
-				BCBCA8A91C1959E0004A072E /* MSCircleCustomCell.h */,
-				BCBCA8AA1C1959E0004A072E /* MSCircleCustomCell.m */,
 				BCCED9491B7C44720002918C /* ViewController.h */,
 				BCCED94A1B7C44720002918C /* ViewController.m */,
+				BCBCA8A91C1959E0004A072E /* MSCircleCustomCell.h */,
+				BCBCA8AA1C1959E0004A072E /* MSCircleCustomCell.m */,
 				BCCED94C1B7C44720002918C /* Main.storyboard */,
 				BC4BB2F51C0847430081B710 /* 0dog.jpg */,
 				BCCED94F1B7C44720002918C /* Images.xcassets */,
@@ -192,6 +188,10 @@
 		BCCED93F1B7C44720002918C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BCCED9431B7C44720002918C /* AppDelegate.h */,
+				BCCED9441B7C44720002918C /* AppDelegate.m */,
+				BC27E8D21C1A69D300F335BD /* FirstViewController.h */,
+				BC27E8D31C1A69D300F335BD /* FirstViewController.m */,
 				BCCED9401B7C44720002918C /* Info.plist */,
 				BCCED9411B7C44720002918C /* main.m */,
 			);

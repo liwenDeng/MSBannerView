@@ -242,7 +242,6 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
        [self.delegate circleView:self configCustomCell:cell AtIndex:index];
     }
 
-    //0x7f9783d1bb50
     return cell;
 }
 

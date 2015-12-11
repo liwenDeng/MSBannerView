@@ -10,17 +10,11 @@
 
 @implementation MSCircleCustomCell
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
-
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
+        self.imaView.layer.borderColor = [UIColor redColor].CGColor;
+        self.imaView.layer.borderWidth = 1;
         self.textLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 30, 20)];
         [self.imaView addSubview:self.textLabel];
     }

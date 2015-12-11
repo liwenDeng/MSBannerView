@@ -13,6 +13,7 @@
 
 @protocol MSCircleViewDelegate <NSObject>
 
+@optional
 - (void)circleView:(MSCircleView*) circleView clickedAtIndex:(NSInteger) index;
 
 - (void)circleView:(MSCircleView *)circleView configCustomCell:(MSCircleBaseCell*)customCell AtIndex:(NSInteger)index;
