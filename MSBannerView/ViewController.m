@@ -26,7 +26,7 @@
         [arr1 addObject:imge];
     }
     
-    MSCircleView *circle = [MSCircleView circleViewWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 200) localImageArray:arr1 perPageCount:3];
+    MSCircleView *circle = [MSCircleView circleViewWithFrame:CGRectMake(0, 150, self.view.frame.size.width, 200) localImageArray:arr1 perPageCount:3];
     circle.delegate = self;     // 代理方法：可实现item的点击和赋值操作
     circle.autoScroll = YES;    // 开启自动轮播
     circle.scrollByItem = YES;  // YES 每次滑动一个item; NO 每次滑动一页
@@ -54,7 +54,7 @@
 
                      ];
 
-    MSCircleView *circleByWebImage = [MSCircleView circleViewWithFrame:CGRectMake(0, 300,self.view.frame.size.width, 200) urlImageArray:arr perPageCount:2];
+    MSCircleView *circleByWebImage = [MSCircleView circleViewWithFrame:CGRectMake(0, 400,self.view.frame.size.width, 200) urlImageArray:arr perPageCount:2];
 
     [self.view addSubview:circleByWebImage];
     
@@ -70,6 +70,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc
+{
+    NSLog(@"vc dealloc");
+}
+
+- (UIRectEdge)edgesForExtendedLayout {
+    return UIRectEdgeNone;
 }
 
 @end

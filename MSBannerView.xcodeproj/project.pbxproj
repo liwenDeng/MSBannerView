@@ -18,6 +18,7 @@
 		BC1848BF1C1196E0006CFD1F /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1848B51C1196E0006CFD1F /* 7.png */; };
 		BC1848C01C1196E0006CFD1F /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1848B61C1196E0006CFD1F /* 8.png */; };
 		BC1848C11C1196E0006CFD1F /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1848B71C1196E0006CFD1F /* 9.png */; };
+		BC27E8D41C1A69D300F335BD /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC27E8D31C1A69D300F335BD /* FirstViewController.m */; };
 		BC4BB2F61C0847430081B710 /* 0dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC4BB2F51C0847430081B710 /* 0dog.jpg */; };
 		BC79D8711C0EE4A4005FF3EC /* MSCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC79D8701C0EE4A4005FF3EC /* MSCircleView.m */; };
 		BCBCA8AB1C1959E0004A072E /* MSCircleCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBCA8AA1C1959E0004A072E /* MSCircleCustomCell.m */; };
@@ -58,6 +59,8 @@
 		BC1848B51C1196E0006CFD1F /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
 		BC1848B61C1196E0006CFD1F /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		BC1848B71C1196E0006CFD1F /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
+		BC27E8D21C1A69D300F335BD /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		BC27E8D31C1A69D300F335BD /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		BC4BB2F51C0847430081B710 /* 0dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0dog.jpg; sourceTree = "<group>"; };
 		BC79D86F1C0EE4A4005FF3EC /* MSCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCircleView.h; sourceTree = "<group>"; };
 		BC79D8701C0EE4A4005FF3EC /* MSCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCircleView.m; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 				BC79D86E1C0EE491005FF3EC /* MSCircleView */,
 				BCCED9431B7C44720002918C /* AppDelegate.h */,
 				BCCED9441B7C44720002918C /* AppDelegate.m */,
+				BC27E8D21C1A69D300F335BD /* FirstViewController.h */,
+				BC27E8D31C1A69D300F335BD /* FirstViewController.m */,
 				BCBCA8A91C1959E0004A072E /* MSCircleCustomCell.h */,
 				BCBCA8AA1C1959E0004A072E /* MSCircleCustomCell.m */,
 				BCCED9491B7C44720002918C /* ViewController.h */,
@@ -363,6 +368,7 @@
 				BCCED9451B7C44720002918C /* AppDelegate.m in Sources */,
 				BCCED94B1B7C44720002918C /* ViewController.m in Sources */,
 				BCCED9421B7C44720002918C /* main.m in Sources */,
+				BC27E8D41C1A69D300F335BD /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

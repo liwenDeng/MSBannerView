@@ -65,7 +65,7 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
         NSAssert( perPageCount <= imageArray.count, @"传入的数组个数必须大于每组个数");
         return nil;
     }
-    
+
     if (self = [super initWithFrame:frame]) {
         
         _perPageCount = perPageCount;
@@ -104,7 +104,6 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
     _collectionView.pagingEnabled = YES; // 是否分页
     
     [_collectionView registerClass:self.cellClass ? self.cellClass : [MSCircleBaseCell class]  forCellWithReuseIdentifier:kCellIdentifier];
-    
     [self addSubview:_collectionView];
     
 }
@@ -327,6 +326,7 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
 - (void)startScroll
 {
     NSLog(@"开始播放");
+    _timer = nil;
     _timer = [NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(scrollToNextGroupOrItem) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 }
@@ -401,6 +401,28 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
         return;
     }
     _configBlock = configBlock;
+}
+
+#pragma mark LifeCirlce
+//解决当timer释放后 回调scrollViewDidScroll时访问野指针导致崩溃
+- (void)dealloc {
+    _collectionView.delegate = nil;
+    _collectionView.dataSource = nil;
+    NSLog(@"circle dealloc");
+}
+
+- (void)willMoveToWindow:(UIWindow *)newWindow
+{
+    if (newWindow) {
+        NSLog(@"在显示中");
+        if (self.autoScroll && _timer == nil) {
+            [self startScroll];
+        }
+    }else {
+        NSLog(@"不在显示");
+        [_timer invalidate];
+        _timer = nil;
+    }
 }
 
 @end
