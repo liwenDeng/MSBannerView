@@ -40,6 +40,7 @@
     circle2.delegate = self;     // 代理方法：可实现item的点击和赋值操作
     circle2.autoScroll = YES;    // 开启自动轮播
     circle2.scrollByItem = NO;  // YES 每次滑动一个item; NO 每次滑动一页
+    circle2.interval = 5;
     
     circle2.cellClass = [MSCircleCustomCell class];  //自定义item的Cell
     // 点击item的block 也可以通过代理实现

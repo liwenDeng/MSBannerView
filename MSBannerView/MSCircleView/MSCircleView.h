@@ -50,6 +50,11 @@ typedef void(^CircleViewCustomCellConfigBlock)(MSCircleBaseCell* customCell,NSIn
  */
 @property (nonatomic, copy)CircleViewCustomCellConfigBlock configBlock;
 
+/**
+ *  播放间隔 默认为2.5
+ */
+@property (nonatomic, assign)NSTimeInterval interval;
+
 @property (nonatomic, strong)Class cellClass;
 
 /**

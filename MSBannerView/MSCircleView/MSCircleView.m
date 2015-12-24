@@ -326,7 +326,7 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
 {
     NSLog(@"开始播放");
     _timer = nil;
-    _timer = [NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(scrollToNextGroupOrItem) userInfo:nil repeats:YES];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:self.interval == 0 ? 2.5 : self.interval target:self selector:@selector(scrollToNextGroupOrItem) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 }
 
