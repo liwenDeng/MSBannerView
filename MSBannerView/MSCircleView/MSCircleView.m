@@ -67,7 +67,6 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
     }
 
     if (self = [super initWithFrame:frame]) {
-        
         _perPageCount = perPageCount;
         _realImageCount = imageArray.count;
         if ([[imageArray firstObject] isKindOfClass:[UIImage class]]) {
@@ -76,7 +75,6 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
         else if ([[imageArray firstObject] isKindOfClass:[NSString class]]) {
             [self reSetUrlImageArrayWith:imageArray perPageCount:perPageCount];
         }
-        
         [self initUIWithFrame:frame];
         [self scrollToFirstPage];
     }
@@ -121,7 +119,7 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
         return;
     }
     
-    // 如果能除尽，则传入的个数为一个循环，再不上头和尾
+    // 如果能除尽，则传入的个数为一个循环，再补上头和尾
     if (urlImageArray.count % perPageCount == 0) {
         NSMutableArray *array = [NSMutableArray arrayWithArray:urlImageArray];
         for (NSInteger i = 0; i < perPageCount; i++) {
@@ -324,7 +322,7 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
 #pragma - mark 自动播放
 - (void)startScroll
 {
-    NSLog(@"开始播放");
+//    NSLog(@"开始播放");
     _timer = nil;
     _timer = [NSTimer scheduledTimerWithTimeInterval:self.interval == 0 ? 2.5 : self.interval target:self selector:@selector(scrollToNextGroupOrItem) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
@@ -333,7 +331,7 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
 - (void)stopScroll
 {
     if (_timer) {
-        NSLog(@"真的停止了");
+//        NSLog(@"停止了");
         [_timer invalidate];
         _timer = nil;
     }
@@ -387,7 +385,7 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
 
 }
 
-#pragma mark -block
+#pragma mark - block
 - (void)addTapBlock:(CircleViewTapBlock)block
 {
     _block = [block copy];
@@ -399,10 +397,10 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
         NSAssert(0, @"必须先设置self.cellClass_继承自MSCircleBaseCell类");
         return;
     }
-    _configBlock = configBlock;
+    self.configBlock = configBlock;
 }
 
-#pragma mark LifeCirlce
+#pragma mark - LifeCirlce
 //解决当timer释放后 回调scrollViewDidScroll时访问野指针导致崩溃
 - (void)dealloc {
     _collectionView.delegate = nil;
@@ -413,12 +411,12 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
 - (void)willMoveToWindow:(UIWindow *)newWindow
 {
     if (newWindow) {
-        NSLog(@"在显示中");
+//        NSLog(@"在显示中");
         if (self.autoScroll && _timer == nil) {
             [self startScroll];
         }
     }else {
-        NSLog(@"不在显示");
+//        NSLog(@"不在显示");
         [_timer invalidate];
         _timer = nil;
     }
