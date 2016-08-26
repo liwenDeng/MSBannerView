@@ -65,7 +65,7 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
         NSAssert( perPageCount <= imageArray.count, @"传入的数组个数必须大于每组个数");
         return nil;
     }
-
+    
     if (self = [super initWithFrame:frame]) {
         _perPageCount = perPageCount;
         _realImageCount = imageArray.count;
@@ -201,7 +201,7 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
         _totalPage = array.count / perPageCount;
         return;
     }
-
+    
 }
 
 #pragma mark - UICollectionViewDelegate&DataSource
@@ -213,9 +213,9 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MSCircleBaseCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier forIndexPath:indexPath];
-
+    
     if (self.urlImageArray) {
-         NSString *imageStr = self.urlImageArray[indexPath.row];
+        NSString *imageStr = self.urlImageArray[indexPath.row];
         [cell.imaView sd_setImageWithURL:[NSURL URLWithString:imageStr]] ;
     } else {
         cell.imaView.image = self.localImageArray[indexPath.row];
@@ -226,7 +226,7 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
     if (index < 0) {
         index = _realImageCount - _perPageCount + indexPath.row;
     }
-
+    
     if (self.configBlock) {
         self.configBlock(cell,index);
     }
@@ -237,9 +237,9 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
             NSAssert(0, @"必须先设置self.cellClass_继承自MSCircleBaseCell类");
             return cell;
         }
-       [self.delegate circleView:self configCustomCell:cell AtIndex:index];
+        [self.delegate circleView:self configCustomCell:cell AtIndex:index];
     }
-
+    
     return cell;
 }
 
@@ -267,6 +267,11 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
         [self scrollToLastPage];
     } else if (x == (_totalPage - 1) * _collectionView.frame.size.width) {
         [self scrollToFirstPage];
+    } else {
+        NSInteger pageIndex = _collectionView.contentOffset.x / self.frame.size.width;
+        if (self.pageScrollBlock) {
+            self.pageScrollBlock(pageIndex - 1);
+        }
     }
 }
 
@@ -322,16 +327,17 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
 #pragma - mark 自动播放
 - (void)startScroll
 {
-//    NSLog(@"开始播放");
+    //    NSLog(@"开始播放");
     _timer = nil;
     _timer = [NSTimer scheduledTimerWithTimeInterval:self.interval == 0 ? 2.5 : self.interval target:self selector:@selector(scrollToNextGroupOrItem) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    [[NSRunLoop mainRunLoop]addTimer:_timer forMode:NSRunLoopCommonModes];
 }
 
 - (void)stopScroll
 {
     if (_timer) {
-//        NSLog(@"停止了");
+        //        NSLog(@"停止了");
         [_timer invalidate];
         _timer = nil;
     }
@@ -340,7 +346,7 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
 - (void)scrollToNextGroupOrItem
 {
     // 如果在播放时点击了图片，可能会使分割出现偏差 需要修正当前x
-//    NSInteger currentIndex = roundf(_collectionView.contentOffset.x / _flowLayout.itemSize.width);
+    //    NSInteger currentIndex = roundf(_collectionView.contentOffset.x / _flowLayout.itemSize.width);
     NSInteger currentIndex = _collectionView.contentOffset.x / _flowLayout.itemSize.width;
     CGFloat amendX = currentIndex * _flowLayout.itemSize.width;
     
@@ -374,7 +380,7 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
 
 - (void)setCellClass:(Class)cellClass
 {
-
+    
     if ([cellClass isSubclassOfClass:[MSCircleBaseCell class]]) {
         _cellClass = cellClass;
         [_collectionView registerClass:self.cellClass  forCellWithReuseIdentifier:kCellIdentifier];
@@ -382,7 +388,7 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
         NSAssert(0, @"cellClass 必须是 MSCircleBaseCell子类");
         return;
     }
-
+    
 }
 
 #pragma mark - block
@@ -400,6 +406,10 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
     self.configBlock = configBlock;
 }
 
+- (void)addPageScrollBlock:(CircleViewPageScrollBlock)pageScrollBlock {
+    _pageScrollBlock = [pageScrollBlock copy];
+}
+
 #pragma mark - LifeCirlce
 //解决当timer释放后 回调scrollViewDidScroll时访问野指针导致崩溃
 - (void)dealloc {
@@ -411,12 +421,12 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
 - (void)willMoveToWindow:(UIWindow *)newWindow
 {
     if (newWindow) {
-//        NSLog(@"在显示中");
+        //        NSLog(@"在显示中");
         if (self.autoScroll && _timer == nil) {
             [self startScroll];
         }
     }else {
-//        NSLog(@"不在显示");
+        //        NSLog(@"不在显示");
         [_timer invalidate];
         _timer = nil;
     }

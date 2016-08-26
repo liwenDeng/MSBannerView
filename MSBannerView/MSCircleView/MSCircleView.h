@@ -14,14 +14,18 @@
 @protocol MSCircleViewDelegate <NSObject>
 
 @optional
-- (void)circleView:(MSCircleView*) circleView clickedAtIndex:(NSInteger) index;
+
+- (void)circleView:(MSCircleView*) circleView clickedAtIndex:(NSInteger)index;
 
 - (void)circleView:(MSCircleView *)circleView configCustomCell:(MSCircleBaseCell*)customCell AtIndex:(NSInteger)index;
+
+- (void)circleView:(MSCircleView*) circleView scrollToPageIndex:(NSInteger)pageindex;
 
 @end
 
 typedef void(^CircleViewTapBlock)(NSInteger index);
 typedef void(^CircleViewCustomCellConfigBlock)(MSCircleBaseCell* customCell,NSInteger index);
+typedef void(^CircleViewPageScrollBlock)(NSInteger index);
 
 @interface MSCircleView : UIView
 
@@ -49,6 +53,11 @@ typedef void(^CircleViewCustomCellConfigBlock)(MSCircleBaseCell* customCell,NSIn
  *  配置自定义Cell
  */
 @property (nonatomic, copy)CircleViewCustomCellConfigBlock configBlock;
+
+/**
+ *  当前页码 从1开始
+ */
+@property (nonatomic, copy)CircleViewPageScrollBlock pageScrollBlock;
 
 /**
  *  播放间隔 默认为2.5
@@ -82,5 +91,6 @@ typedef void(^CircleViewCustomCellConfigBlock)(MSCircleBaseCell* customCell,NSIn
  */
 - (void)addTapBlock:(CircleViewTapBlock)block;
 - (void)configCustomCell:(CircleViewCustomCellConfigBlock)configBlock;
+- (void)addPageScrollBlock:(CircleViewPageScrollBlock)pageScrollBlock;
 
 @end
