@@ -32,7 +32,7 @@
     circle1.delegate = self;     // 代理方法：可实现item的点击和赋值操作
     circle1.autoScroll = YES;    // 开启自动轮播
     circle1.scrollByItem = YES;  // YES 每次滑动一个item; NO 每次滑动一页
-    
+    circle1.backgroundColor = [UIColor whiteColor];
     [circle1 addTapBlock:^(NSInteger index) {
         NSLog(@"circle1 clickat:%ld",index);
     }];
@@ -41,8 +41,8 @@
 
     // 自定义样式 =====================================================================
     MSCircleView *circle2 = [MSCircleView circleViewWithFrame:CGRectMake(0, 160, self.view.frame.size.width, 100) localImageArray:arr1 perPageCount:3];
-    circle2.delegate = self;     // 代理方法：可实现item的点击和赋值操作
-//    circle2.autoScroll = YES;    // 开启自动轮播
+//    circle2.delegate = self;     // 代理方法：可实现item的点击和赋值操作
+    circle2.autoScroll = YES;    // 开启自动轮播
     circle2.scrollByItem = NO;  // YES 每次滑动一个item; NO 每次滑动一页
     circle2.interval = 5;
     
@@ -71,7 +71,7 @@
                      ];
     MSCircleView *circleByWebImage1 = [MSCircleView circleViewWithFrame:CGRectMake(0, 300,self.view.frame.size.width, 100) urlImageArray:arr perPageCount:2];
     circleByWebImage1.scrollByItem = YES;
-
+    circleByWebImage1.autoScroll = YES;
     [self.view addSubview:circleByWebImage1];
     
     // =====================================================================

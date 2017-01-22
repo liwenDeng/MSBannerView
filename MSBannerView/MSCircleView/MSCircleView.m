@@ -61,22 +61,9 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
 - (instancetype)initWithFrame:(CGRect)frame imageArray:(NSArray*)imageArray perPageCount:(NSInteger)perPageCount
 {
     
-    if (perPageCount > imageArray.count) {
-        NSAssert( perPageCount <= imageArray.count, @"传入的数组个数必须大于每组个数");
-        return nil;
-    }
-    
     if (self = [super initWithFrame:frame]) {
-        _perPageCount = perPageCount;
-        _realImageCount = imageArray.count;
-        if ([[imageArray firstObject] isKindOfClass:[UIImage class]]) {
-            [self reSetLocalImageArray:imageArray perPageCount:perPageCount];
-        }
-        else if ([[imageArray firstObject] isKindOfClass:[NSString class]]) {
-            [self reSetUrlImageArrayWith:imageArray perPageCount:perPageCount];
-        }
+        [self setImageArray:imageArray perPageCount:perPageCount];
         [self initUIWithFrame:frame];
-        [self scrollToFirstPage];
     }
     return self;
 }
@@ -104,6 +91,23 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
     [_collectionView registerClass:self.cellClass ? self.cellClass : [MSCircleBaseCell class]  forCellWithReuseIdentifier:kCellIdentifier];
     [self addSubview:_collectionView];
     
+}
+
+- (void)setImageArray:(NSArray*)imageArray perPageCount:(NSInteger)perPageCount {
+    _perPageCount = perPageCount;
+    _realImageCount = imageArray.count;
+    _urlImageArray = [NSMutableArray array];
+    _localImageArray = [NSMutableArray array];
+    if (imageArray.count > 1) {
+        if ([[imageArray firstObject] isKindOfClass:[UIImage class]]) {
+            [self reSetLocalImageArray:imageArray perPageCount:perPageCount];
+        }
+        else if ([[imageArray firstObject] isKindOfClass:[NSString class]]) {
+            [self reSetUrlImageArrayWith:imageArray perPageCount:perPageCount];
+        }
+        [self.collectionView reloadData];
+        [self scrollToFirstPage];
+    }
 }
 
 #pragma  mark - 重新填充数据
@@ -205,16 +209,20 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
 }
 
 #pragma mark - UICollectionViewDelegate&DataSource
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.urlImageArray ? self.urlImageArray.count : self.localImageArray.count;
+    return self.urlImageArray.count ? self.urlImageArray.count : self.localImageArray.count;
 }
 
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MSCircleBaseCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier forIndexPath:indexPath];
     
-    if (self.urlImageArray) {
+    if (self.urlImageArray.count) {
         NSString *imageStr = self.urlImageArray[indexPath.row];
         [cell.imaView sd_setImageWithURL:[NSURL URLWithString:imageStr]] ;
     } else {
@@ -331,7 +339,6 @@ static NSString* const  kCellIdentifier = @"MSCircleCellIdentifier";
     _timer = nil;
     _timer = [NSTimer scheduledTimerWithTimeInterval:self.interval == 0 ? 2.5 : self.interval target:self selector:@selector(scrollToNextGroupOrItem) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
-    [[NSRunLoop mainRunLoop]addTimer:_timer forMode:NSRunLoopCommonModes];
 }
 
 - (void)stopScroll
